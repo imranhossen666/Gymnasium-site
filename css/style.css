@@ -1,0 +1,904 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.margin-right {
+    margin-right: 0 !important;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* nav part css start */
+
+#nav {
+    background-color: rgba(241, 236, 236, 0.137);
+    position: absolute;
+    width: 100%;
+    margin-top: 50px;
+}
+.nav-main {
+    display: flex;
+}
+.nav-logo {
+    width: 30%;
+    position: relative;
+}
+.logo {
+    width: 200px;
+    margin-left: 30px;
+    text-align: center;
+    background-color: rgba(241, 236, 236, 0.541);
+    position: absolute;
+    padding: 15px 0;
+    top: -15px;
+    transform: skew(-20deg);
+}
+.logo img {
+    transform: skew(20deg);
+}
+.menu {
+    width: 70%;
+}
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+.menu ul li a {
+    padding: 20px 15px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    position: relative;
+    transition: 0.5s;
+}
+.menu ul li a:hover {
+    color: #353535;
+    background-color: #fff;
+}
+.menu ul li a::after {
+    position: absolute;
+    content: '';
+    width: calc(100% - 30px);
+    height: 2px;
+    background-color: #e23e38;
+    bottom: 5px;
+    left: 15px;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.menu ul li a:hover::after {
+    transform: scale(1);
+}
+/* nav part css end */
+
+
+/* banner part css start */
+#banner {
+    background: url(../images/banner.jpg) no-repeat center / cover;
+    padding: 100px 0;
+}
+.banner-main {
+    text-align: center;
+    margin-top: 180px;
+}
+.banner-text h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+.banner-text h1 {
+    color: #e23e38;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+}
+.banner-text p {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 0 300px;
+}
+.banner-btn {
+    margin-top: 50px;
+}
+.banner-btn a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px;
+    border: 2px solid #fff;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    width: 150px;
+    margin: 0 30px;
+    transition: 0.5s;
+}
+.banner-btn a:hover {
+    background-color: #e23e38;
+    border: 2px solid transparent;
+}
+/* banner part css end */
+
+
+/* about part css start */
+#about {
+    padding: 80px 0;
+}
+.about-main {
+    display: flex;
+}
+.about-img {
+    width: 50%;
+    position: relative;
+}
+.about-img::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: 0.2s;
+}
+.about-img img {
+    width: 100%;
+    height: 100%;
+}
+.play-btn {
+    position: absolute;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 22;
+    visibility: hidden;
+}
+.about-img:hover::after {
+    visibility: visible;
+}
+.about-img:hover .play-btn {
+    visibility: visible;
+}
+
+.about-text {
+    text-align: center;
+    width: 50%;
+}
+.about-text img {
+    width: 100px;
+}
+.about-text h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #353535;
+    text-transform: uppercase;
+}
+.about-text p {
+    padding: 15px 30px;
+    color: #353535;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+/* about part css end */
+
+
+/* gallery part css start */
+#gallery {
+    padding: 25px 0 10px 0;
+    background: url(../images/gallery-img.jpg) no-repeat center / cover;
+    position: relative;
+}
+#gallery::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    top: 0;
+    left: 0;
+}
+.gallery-head {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.gallery-head h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #353535;
+    text-transform: uppercase;
+}
+.gallery-head img {
+    width: 100px;
+}
+.gallery-main {
+    display: flex;
+    justify-content: space-between;
+}
+.gallery-items {
+    width: 32%;
+    z-index: 1;
+}
+.g-img {
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px;
+
+}
+.g-img img {
+    width: 100%;
+    margin-right: 20px;
+}
+.img-over{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(226, 62, 56, 0.651);
+    left: 20px;
+    top: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.699);
+    transform: scale(0);
+    transition: 0.2s;
+}
+.img-over img {
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.g-img:hover .img-over {
+    transform: scale(1);
+}
+/* gallery part css end */
+
+
+/* team part css start */
+#team {
+    padding: 70px 0;
+}
+.team-main {
+    display: flex;
+    justify-content: space-between;
+}
+.team-items {
+    width: 24%;
+    margin-right: 20px;
+    background-color: #ffffff;
+    transition: 0.5s;
+}
+.team-items:hover {
+    -webkit-box-shadow: 6px 9px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 9px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 6px 9px 5px -2px rgba(0,0,0,0.75);
+}
+.team-img {
+    position: relative;
+}
+.team-img img {
+    width: 100%;
+}
+.team-items h4 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #353535;
+    text-transform: uppercase;
+    text-align: center;
+}
+.team-items h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #353535;
+    text-align: center;
+}
+.team-items p {
+    padding: 10px 30px 30px 20px;
+    color: #353535;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    visibility: hidden;
+    text-align: center;
+}
+.team-items:hover p {
+    visibility: visible;
+}
+.team-over{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(226, 62, 56, 0.651);
+    left: 15px;
+    top: 15px;
+    border: 5px solid rgba(255, 255, 255, 0.795);
+    transition: 0.2s;
+    transform: scaleX(0);
+}
+.team-over ul {
+    list-style-type: none;
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    transform: translateX(-50%,50%);
+}
+.team-over ul li a {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 8px;
+    margin: 5px 0;
+    display: block;
+    text-align: center;
+    transition: 0.5s;
+}
+.team-over ul li a:hover {
+    color: #1da0f2;
+    background-color: #fff;
+}
+.team-img:hover .team-over {
+    transform: scaleX(1);
+}
+/* team part css end */
+
+
+/* testimonial part css start */
+#testimonial {
+    background: url(../images/gallery-img.jpg) no-repeat center / cover;
+    padding: 50px 0;
+    position: relative;
+}
+#testimonial::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    top: 0;
+    left: 0;
+}
+.testi-main {
+    display: flex;
+}
+.testi-items {
+    z-index: 1;
+}
+.testi-sub-head {
+    display: flex;
+}
+.testi-text1 {
+    margin-left: 20px;
+}
+.testi-text1 h5 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+.testi-text1 h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+.testi-text2 p {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding: 10px 30px 0 0;
+}
+/* testimonial part css end */
+
+
+/* membership part css start */
+#membership {
+    padding: 70px 0;
+}
+.member-main {
+    display: flex;
+    justify-content: space-between;
+}
+.member-one {
+    width: 32%;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+.member-one h2 {
+    background-color: #dddddd;
+    color: #353535;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 0;
+    transition: 0.5s;
+}
+.member-one h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.member-btn {
+    margin-top: 30px;
+}
+.member-btn a{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #dddddd;
+    color: #353535;
+    padding: 10px 40px;
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.member-one:hover .member-btn a {
+    background-color: #e23e38;
+    color: #fff;
+}
+.member-one:hover h2 {
+    background-color: #e23e38;
+    color: #fff;
+}
+#member-items1 {
+    width: 100%;
+    background: url(../images/member1.jpg) no-repeat center / cover;
+    padding: 40px 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+#member-items1::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    top: 0;
+    left: 0;
+}
+.member-text h3 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+}
+.member-text p {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.member-two {
+    width: 32%;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+.member-two h2 {
+    background-color: #dddddd;
+    color: #353535;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 0;
+    transition: 0.5s;
+}
+.member-two h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.member-btn a{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #dddddd;
+    color: #353535;
+    padding: 10px 40px;
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.member-two:hover .member-btn a {
+    background-color: #e23e38;
+    color: #fff;
+}
+.member-two:hover h2 {
+    background-color: #e23e38;
+    color: #fff;
+}
+
+#member-items2 {
+    width: 100%;
+    background: url(../images/member2.jpg) no-repeat center / cover;
+    padding: 40px 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+#member-items2::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    top: 0;
+    left: 0;
+}
+.member-three {
+    width: 32%;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+.member-three h2 {
+    background-color: #dddddd;
+    color: #353535;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 0;
+    transition: 0.5s;
+}
+.member-three h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.member-btn a{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #dddddd;
+    color: #353535;
+    padding: 10px 40px;
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.member-three:hover .member-btn a {
+    background-color: #e23e38;
+    color: #fff;
+}
+.member-three:hover h2 {
+    background-color: #e23e38;
+    color: #fff;
+}
+#member-items3 {
+    width: 100%;
+    background: url(../images/member3.jpg) no-repeat center / cover;
+    padding: 40px 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+#member-items3::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    top: 0;
+    left: 0;
+}
+.member-text {
+    display: flex;
+    align-items: flex-end;
+    z-index: 1;
+}
+.member-text h3 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+}
+.member-text p {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+/* membership part css end */
+
+
+/* counter part css start */
+#counter {
+    padding: 50px 0;
+    background: url(../images/counter-banner.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 44;
+}
+#counter::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    top: 0;
+    left: 0;
+    z-index: -44;
+}
+.counter-main {
+    display: flex;
+    text-align: center;
+}
+.counter-one {
+    width: 20%;
+    
+}
+.counter-one h3 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+.counter-one p {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+/* counter part css end */
+
+
+/* our classes part css start */
+#class {
+    padding: 70px 0;
+}
+.nav-class ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+.nav-class ul li a {
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #f1f1f1;
+    color: #353535;
+    width: 200px;
+    display: block;
+    transition: 0.5s;
+}
+.nav-class ul li a:hover {
+    background-color: #e23e38;
+    color: #fff;
+}
+
+.class-icon {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+}
+.class-items {
+    width: 19.50%;
+    background-color: #f1f1f1;
+    margin: 3px;
+    transition: 0.5s;
+}
+.class-items:hover {
+    background-color: #e23e38;
+}
+.class-items:hover h6 {
+    color: #fff;
+}
+.class-items:hover p {
+    color: #fff;
+}
+.class-items h6 {
+    color: #353535;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 20px 0;
+}
+.class-items p {
+    color: #353535;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 10px 0 30px 0;
+}
+
+.l-logo {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.l-items img {
+    transition: 0.5s;
+}
+.l-items img:hover {
+    box-shadow: 0 0 3px 3px black;
+}
+/* our classes part css end */
+
+
+/* footer part css start */
+#footer {
+    background: url(../images/footer-banner.jpg) no-repeat center / cover;
+    padding: 30px 0;
+    position: relative;
+    z-index: 33;
+}
+#footer::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    top: 0;
+    left: 0;
+    z-index: -33;
+}
+.footer-logo {
+    text-align: center;
+}
+hr {
+    margin: 30px 0;
+}
+.footer-main {
+    display: flex;
+}
+.footer-one {
+    width: 25%;
+}
+.footer-one h4 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.footer-one p {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+.footer-two {
+    width: 25%;
+}
+.footer-two h4 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.footer-icon {
+    display: flex;
+}
+.footer-icon img {
+    width: 50px;
+    height: 15px;
+}
+.footer-icon p {
+    color: #fff;
+    padding: 0 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    padding-bottom: 30px;
+    line-height: 25px;
+}
+.footer-three {
+    width: 25%;
+}
+.footer-three h4 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.footer-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.img1 {
+    width: 21.30%;
+    margin: 5px;
+    position: relative;
+}
+.img1::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+.img1:hover::after {
+    opacity: 1;
+}
+.img1 img {
+    width: 100%;
+}
+.footer-four {
+    width: 25%;
+}
+.footer-four h4 {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+
+.location {
+    display: flex;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+.location i {
+    color: #e23e38;
+}
+.location p {
+    padding-left: 10px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.footer-menu ul {
+    list-style-type: none;
+    margin-left: 30px;
+    display: flex;
+    text-align: center;
+}
+.footer-menu ul li i {
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding: 10px;
+    color: #fff;
+    margin: 0 4px;
+    width: 40px;
+    transition: 0.5s;
+}
+.footer-menu ul li i:hover {
+    background-color: #e23e38;
+    border: 2px solid transparent;
+}
+
+.copy p {
+    text-align: center;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.copy span {
+    color: #e23e38;
+}
+/* footer part css end */
