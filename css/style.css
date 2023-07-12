@@ -13,7 +13,7 @@ img {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -27,6 +27,7 @@ img {
 }
 .nav-main {
     display: flex;
+    justify-content: space-between;
 }
 .nav-logo {
     width: 30%;
@@ -38,12 +39,14 @@ img {
     text-align: center;
     background-color: rgba(241, 236, 236, 0.541);
     position: absolute;
-    padding: 15px 0;
+    padding: 15px 10px;
     top: -15px;
     transform: skew(-20deg);
+    backdrop-filter: blur(10px);
 }
 .logo img {
     transform: skew(20deg);
+    width: 100%;
 }
 .menu {
     width: 70%;
@@ -81,6 +84,13 @@ img {
 }
 .menu ul li a:hover::after {
     transform: scale(1);
+}
+
+.menu-icon {
+    display: none;
+}
+.menu-close {
+    display: none;
 }
 /* nav part css end */
 
@@ -645,7 +655,6 @@ img {
 }
 .counter-one {
     width: 20%;
-    
 }
 .counter-one h3 {
     color: #fff;
@@ -889,7 +898,8 @@ hr {
 }
 .footer-menu ul li i:hover {
     background-color: #e23e38;
-    border: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-bottom: 2px solid transparent;
 }
 
 .copy p {

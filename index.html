@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
@@ -21,14 +22,16 @@
                     </div>
                 </div>
                 <div class="menu">
+                    <i class="fa-solid fa-bars menu-icon"></i>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Plans</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Testimonial</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <i class="fa-solid fa-xmark menu-close"></i>
+                        <li><a href="#banner">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#testimonial-main">Testimonial</a></li>
+                        <li><a href="#footer">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,7 +103,6 @@
                             <img src="images/search.png" alt="">
                         </div>
                     </div>
-                    
                 </div>
                 <div class="gallery-items">
                     <div class="g-img">
@@ -214,7 +216,7 @@
 
 
     <!-- testimonial part start -->
-    <div>
+    <section id="testimonial-main">
         <div class="container">
             <div class="testimonial-head">
                 <div class="gallery-head">
@@ -259,7 +261,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- testimonial part end -->
 
 
@@ -557,10 +559,12 @@
         </div>
         <hr>
         <div class="copy">
-            <p>Copyright  All rights reserved by <span>IMRAN.</span></p>
+            <p>Copyright <i class="fa-regular fa-copyright"></i> All rights reserved by <span>IMRAN.</span></p>
         </div>
     </footer>
     <!-- footer part end -->
 
+
+    <script src="js/custom.js"></script>
 </body>
 </html>
